@@ -138,6 +138,38 @@ var b = React.createClass({
 var a = React.createElement(b,{name: "Ehsan"});
 ReactDOM.render(a,document.getElementById('root'))
 
+/******************************fifth Example increament OR DEcreamnt *****************************************************/
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+var component = React.createClass({
+  getInitialState : function()
+  {
+    return {
+      count: 0
+    }
+  },
+  Increament:function()
+  {
+    this.setState({
+      count : this.state.count+1
+    });
+  },
+  decreament: function(){
+    this.setState({
+      count : this.state.count-1,
+    });
+  },
+render:function()
+{
+  return <div><h1>{this.state.count}</h1><button onClick={this.Increament}>Increment</button><button onClick={this.decreament}>Decrement</button></div>
+}
+})
+var a = React.createElement(component);
+ReactDOM.render(a
+,
+document.getElementById('root'))
 
 
 
