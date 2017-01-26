@@ -29,7 +29,7 @@ React.createElement(component,
 
 document.getElementById('root'))
 
-// Second Example
+/*************************************** Second Example*************************************************************/
 
 import React from 'react'
 import ReactDOM from 'react-dom'
