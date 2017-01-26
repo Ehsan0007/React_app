@@ -78,3 +78,67 @@ ReactDOM.render(
   React.createElement(com, {firstname: "Sami"}),document.getElementById('root')
 );
 
+
+/************************* Fourth Example Stateless Form *****************************************/
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+var comp = React.createClass({
+  propTypes : {
+    name : React.PropTypes.string.isRequired
+  },
+  getDefaultProps : function(){
+    return {
+      name :"",
+    };
+  },
+  render: function()
+  {
+    return React.DOM.div(null,
+    React.DOM.textarea({defaultValue : this.props.name}),React.DOM.h1(null,this.props.name.length)
+    )
+    
+  }
+})
+
+var a = React.createElement(comp,{name : "EhsanKhan"});
+
+ReactDOM.render(a,document.getElementById('root'))
+
+
+
+
+/*********************************Fifth Example Statefull Example *******************************************************/
+
+var b = React.createClass({
+  getInitialState : function()
+  {
+     return {
+       name: this.props.name,
+     }
+  },
+  _textChange : function(ev)
+  {
+    this.setState({
+      name : ev.target.value
+    })
+  },
+
+  render:function (){
+    return React.DOM.div(null,
+    React.DOM.textarea({
+      value : this.state.name,
+      onChange:this._textChange,
+    }),
+    React.DOM.h1(null,this.state.name.length)
+    )
+  }
+})
+
+var a = React.createElement(b,{name: "Ehsan"});
+ReactDOM.render(a,document.getElementById('root'))
+
+
+
+
+
