@@ -51,3 +51,28 @@ ReactDOM.render(
   ),
   document.getElementById('root')
 )
+
+/******************Third Example***************************************/
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+
+var com = React.createClass({
+  propTypes:{
+    firstname: React.PropTypes.string.isRequired,
+    lastname: React.PropTypes.string.isRequired,
+  },
+  getDefaultProps: function(){
+    return {
+      lastname: "Khan"
+    }
+  },
+  render: function(){
+    return React.DOM.h1(null, "Hello ", this.props.firstname, this.props.lastname)
+  }
+
+});
+
+ReactDOM.render(
+  React.createElement(com, {firstname: "Sami"}),document.getElementById('root')
+);
