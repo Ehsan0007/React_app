@@ -28,3 +28,26 @@ React.createElement(component,
   )  ,
 
 document.getElementById('root'))
+
+// Second Example
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+var component = React.createClass({
+  propTypes : {
+    name : React.PropTypes.string.isRequired,
+  },
+  render : function(){
+    return React.DOM.h1(null,"Hello " + this.props.name)
+  }
+})
+
+ReactDOM.render(
+  React.createElement(component,
+  {
+    name : "Ehsan",
+  }
+  ),
+  document.getElementById('root')
+)
