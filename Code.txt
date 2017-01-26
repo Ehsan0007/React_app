@@ -29,7 +29,7 @@ React.createElement(component,
 
 document.getElementById('root'))
 
-// Second Example
+/*************************************** Second Example*************************************************************/
 
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -51,6 +51,7 @@ ReactDOM.render(
   ),
   document.getElementById('root')
 )
+
 
 /******************Third Example***************************************/
 import React from 'react'
@@ -76,3 +77,4 @@ var com = React.createClass({
 ReactDOM.render(
   React.createElement(com, {firstname: "Sami"}),document.getElementById('root')
 );
+
