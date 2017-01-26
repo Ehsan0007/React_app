@@ -1,0 +1,30 @@
+import React from 'react'
+
+import ReactDOM from 'react-dom'
+
+
+var component = React.createClass({
+ 
+ render:function(){
+   
+ return React.DOM.h1(null,
+    React.DOM.p(null,
+    
+React.DOM.em({id:"head"},"my Name Is Khan"),
+    
+"Child of h1"),
+    
+"Hello Ehsan" , this.props.name)
+  }
+});
+
+
+ReactDOM.render(
+React.createElement(component,
+
+  {
+    name : "Amin Shah"
+  }
+  )  ,
+
+document.getElementById('root'))
